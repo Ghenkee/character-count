@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>文字数カウンター</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>文字数カウント</h1>
+    <textarea id="textInput" oninput="countCharacters()"></textarea>
+    <button onclick="countCharacters()" id="countButton" disabled>
+      カウント
+    </button>
+    <input
+      type="checkbox"
+      id="realTimeCheck"
+      checked
+      onchange="toggleRealTimeCounting()" />
+    <label for="realTimeCheck">リアルタイムでカウント</label>
+
+    <p>文字数：<span id="charCount">0</span></p>
+    <p>改行を除いた文字数：<span id="charCountNoNewline">0</span></p>
+    <p>改行と空白を除いた文字数：<span id="charCountNoWhitespace">0</span></p>
+    <p>行数: <span id="lineCount">0</span></p>
+    <script src="app.js"></script>
+  </body>
+</html>
